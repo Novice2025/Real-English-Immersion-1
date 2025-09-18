@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real English Immersion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #141414;
+            color: #e5e7eb;
+        }
+        .container-bg {
+            background-color: #1f1f1f;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #6b46c1, #805ad5, #a366ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+            display: inline-block;
+        }
+        .section-title {
+            color: #d1d5db;
+            font-weight: 600;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #4b5563;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="container-bg">
+        <div class="flex flex-wrap justify-center sm:justify-between items-center mb-6">
+            <div class="flex flex-wrap justify-center gap-2 mb-2 sm:mb-0">
+                <button id="lesson1Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 1
+                </button>
+                <button id="lesson2Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 2
+                </button>
+                <button id="lesson3Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 3
+                </button>
+                <button id="lesson4Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 4
+                </button>
+                <button id="lesson5Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 5
+                </button>
+                <button id="lesson6Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 6
+                </button>
+                <button id="lesson7Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 7
+                </button>
+                <button id="lesson8Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 8
+                </button>
+                <button id="lesson9Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 9
+                </button>
+                <button id="lesson10Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 10
+                </button>
+                <button id="lesson11Btn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                    Lição 11
+                </button>
+            </div>
+            <button id="langToggleBtn" class="p-2 px-4 rounded-lg bg-gray-700 text-gray-200 font-semibold hover:bg-gray-600 transition-colors">
+                Switch to English
+            </button>
+        </div>
+        
+        <h1 id="mainTitle" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 text-gray-100">
+            Real English for Brazilians
+        </h1>
+
+        <div class="p-6">
+            <!-- 🟥 01 — Cena Imersiva -->
+            <div class="bg-gray-800 p-6 rounded-xl mb-8 border border-gray-700">
+                <h2 id="sectionTitle1" class="section-title text-gray-300">Cena Imersiva</h2>
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-4">🎬</span>
+                    <p id="scriptText" class="text-lg text-gray-200 leading-relaxed font-bold"></p>
+                </div>
+                <p id="situationText" class="text-xl italic font-semibold text-gray-400 mb-6"></p>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                    <p id="ptContextText" class="text-base italic text-gray-500"></p>
+                </div>
+            </div>
+
+            <!-- 🟨 02 — Destaque da Expressão -->
+            <div class="text-center my-10">
+                <span id="phraseHighlight" class="gradient-text text-5xl sm:text-6xl lg:text-7xl"></span>
+            </div>
+            <div class="mb-8">
+                <h2 id="sectionTitle2" class="section-title">📌 Explicação</h2>
+                <p id="meaningText" class="text-lg text-gray-200 leading-relaxed"></p>
+            </div>
+            <div class="mb-8">
+                <h2 id="sectionTitle3" class="section-title">🇧🇷 Equivalente natural no Brasil</h2>
+                <p id="equivalentText1" class="text-lg text-gray-200 leading-relaxed font-semibold"></p>
+            </div>
+            
+            <!-- 🟫 Nova seção de Sinônimos e Variações -->
+            <div class="mb-8">
+                <h2 id="sectionTitleSynonyms" class="section-title">✨ Sinônimos e Variações</h2>
+                <ul id="synonymsList" class="list-disc list-inside text-lg text-gray-200 leading-relaxed pl-4"></ul>
+            </div>
+
+            <!-- 🟦 03 — Diálogo Bilíngue -->
+            <div class="mb-8">
+                <h2 id="sectionTitle4" class="section-title">💬 Diálogo Bilíngue</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-600">
+                        <h3 class="text-xl font-bold mb-4 text-indigo-400" id="englishTitle">English</h3>
+                        <div id="englishDialogue"></div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-600">
+                        <h3 class="text-xl font-bold mb-4 text-purple-400" id="portugueseTitle">Português</h3>
+                        <div id="portugueseDialogue"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟩 04 — Dicas e Associações -->
+            <div class="mb-8">
+                <h2 id="sectionTitle5" class="section-title">🎯 Dicas e Associações</h2>
+                <ul id="usageTips" class="list-disc list-inside text-lg text-gray-200 leading-relaxed pl-4"></ul>
+            </div>
+
+            <!-- 🟪 05 — Exercício de Fixação -->
+            <div class="p-6 bg-purple-900 rounded-xl border-2 border-purple-700">
+                <h2 id="exerciseTitle" class="section-title text-purple-400">🧩 Exercício de Fixação</h2>
+                <p id="exerciseScene" class="text-lg text-gray-200 leading-relaxed mb-4"></p>
+                <p id="exercisePrompt" class="text-lg text-gray-200 leading-relaxed mb-4"></p>
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <input id="exerciseInput" type="text" placeholder="Type the expression here..." class="flex-grow p-3 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <button id="submitBtn" class="bg-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-colors">
+                        Check Answer
+                    </button>
+                </div>
+                <div id="feedback" class="mt-4 text-center font-semibold text-lg" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lessons = {
+                'lesson1': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine that you are…",
+                        situationText: "…waiting for your coffee when someone you haven’t seen in ages walks in.",
+                        ptContextText: "(em português para contextualizar: Imagine que você está esperando seu café quando alguém que você não via há anos entra.)",
+                        phraseHighlight: "WELL! WELL! WELL!",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Expressão usada para mostrar surpresa, curiosidade ou uma leve provocação divertida ao encontrar alguém inesperado.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“Olha só quem apareceu!” / “Ora, ora, ora!”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Look what the cat dragged in!" },
+                            { text: "Speak of the devil!" },
+                            { text: "What do we have here?" }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Well! Well! Well! Look who’s here!", pt: "Ora, ora, ora! Olha só quem apareceu!" },
+                            { en: "Hey! Long time no see!", pt: "Ei! Quanto tempo!" },
+                            { en: "I thought you’d vanished!", pt: "Achei que você tinha sumido!" }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Use para: surpresa divertida." },
+                            { text: "Evite em: reuniões formais." },
+                            { text: "Associe com: um detetive de filme, tipo: “Well, well, well… look what we have here.”" },
+                            { text: "🧠 Dica para brasileiros: Pense no tom de voz que usamos quando dizemos “ahááá” ou “ora, ora” com um sorriso." }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Você vê seu amigo no shopping. Complete a frase:",
+                        exercisePrompt: "<span class=\"font-bold\">___! ___! ___!</span> Look who’s shopping!",
+                        correctAnswer: "Well! Well! Well!",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine that you are…",
+                        situationText: "…waiting for your coffee when someone you haven’t seen in ages walks in.",
+                        ptContextText: "(in Portuguese for context: Imagine que você está esperando seu café quando alguém que você não via há anos entra.)",
+                        phraseHighlight: "WELL! WELL! WELL!",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "An expression used to show surprise, curiosity, or a slightly playful provocation when you see someone unexpected.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“Olha só quem apareceu!” / “Ora, ora, ora!”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Look what the cat dragged in!" },
+                            { text: "Speak of the devil!" },
+                            { text: "What do we have here?" }
+                        ],
+                        sectionTitle4: "💬 Bilingual Dialogue",
+                        englishTitle: "English",
+                        portugueseTitle: "Portuguese",
+                        dialogue: [
+                            { en: "Well! Well! Well! Look who’s here!", pt: "Ora, ora, ora! Olha só quem apareceu!" },
+                            { en: "Hey! Long time no see!", pt: "Ei! Quanto tempo!" },
+                            { en: "I thought you’d vanished!", pt: "Achei que você tinha sumido!" }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Use for: playful surprise." },
+                            { text: "Avoid in: formal meetings." },
+                            { text: "Associate with: a movie detective, like: “Well, well, well… look what we have here.”" },
+                            { text: "🧠 Tip for Brazilians: Think of the tone of voice we use when we say “ahááá” or “ora, ora” with a smile." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "You see your friend at the mall. Complete the sentence:",
+                        exercisePrompt: "<span class=\"font-bold\">___! ___! ___!</span> Look who’s shopping!",
+                        correctAnswer: "Well! Well! Well!",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson2': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine that you are…",
+                        situationText: "…in a hurry when you accidentally spill coffee all over your friend’s brand new shirt.",
+                        ptContextText: "(em português para contextualizar: Imagine que você está com pressa quando acidentalmente derrama café na camisa novinha do seu amigo.)",
+                        phraseHighlight: "NO BIGGIE",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Expressão usada de forma casual para dizer que algo não é um problema ou que não tem importância.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“De boa” / “Tranquilo”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "No problem." },
+                            { text: "It's not a big deal." },
+                            { text: "Don't sweat it." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Oh, no! I am so sorry!", pt: "Oh, não! Me desculpa!" },
+                            { en: "No biggie. It'll come right out.", pt: "De boa. Sai fácil." }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Use para: mostrar que algo não é um problema." },
+                            { text: "Evite em: situações formais (com o seu chefe)." },
+                            { text: "Associe com: um surfista tranquilo, dizendo “no biggie” depois de cair da prancha." },
+                            { text: "🧠 Dica para brasileiros: Pense na sensação de quando dizemos “tranquilo, de boa” depois que um amigo pede desculpas." }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Seu amigo derrama um pouco de água na sua mesa. Você diz para ele não se preocupar:",
+                        exercisePrompt: "Don't worry about the small mistake. It's <span class=\"font-bold\">___ ___</span>.",
+                        correctAnswer: "no biggie",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine that you are…",
+                        situationText: "…in a hurry when you accidentally spill coffee all over your friend’s brand new shirt.",
+                        ptContextText: "(in Portuguese for context: Imagine que você está com pressa quando acidentalmente derrama café na camisa novinha do seu amigo.)",
+                        phraseHighlight: "NO BIGGIE",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "A casual expression used to say that something is not a problem or is of no importance.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“De boa” / “Tranquilo”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "No problem." },
+                            { text: "It's not a big deal." },
+                            { text: "Don't sweat it." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "Your friend spills a little water on your table. You tell them not to worry:",
+                        exercisePrompt: "Don't worry about the small mistake. It's <span class=\"font-bold\">___ ___</span>.",
+                        correctAnswer: "no biggie",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson3': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você é um detetive chegando na cena de um crime. Seus colegas já recolheram as pistas. Você se aproxima, coloca as mãos na cintura e diz:",
+                        ptContextText: "(em português para contextualizar: Você é um detetive chegando na cena de um crime. Seus colegas já recolheram as pistas.)",
+                        phraseHighlight: "SO, WHAT'VE WE GOT?",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Expressão usada para pedir um resumo rápido da situação, mostrando que quer saber o que já foi descoberto.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“Então… o que temos aqui?” ou “E aí, o que temos?”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "What's the situation?" },
+                            { text: "What's the rundown?" },
+                            { text: "What's the status?" }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Detective: So, what’ve we got?", pt: "Detetive: Então… o que temos aqui?" },
+                            { en: "Officer: A broken window and no fingerprints.", pt: "Policial: Uma janela quebrada e nenhuma impressão digital." },
+                            { en: "Detective: Hmm… interesting.", pt: "Detetive: Hmm… interessante." }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Use para: começar a entender uma situação." },
+                            { text: "Evite em: situações formais." },
+                            { text: "Comum em contextos de trabalho, projetos, reuniões ou investigações." },
+                            { text: "🧠 Associação para brasileiros: Pense quando alguém chega e diz: “Beleza… o que temos aí?” — com aquele tom de “manda o resumo”." }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Você chega na sala da equipe e todos estão analisando relatórios. Você diz:",
+                        exercisePrompt: "<span class=\"font-bold\">___</span>, what’ve we got?",
+                        correctAnswer: "so",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You're a detective arriving at a crime scene. Your colleagues have already collected the clues. You approach, put your hands on your hips and say:",
+                        ptContextText: "(in Portuguese for context: Você é um detetive chegando na cena de um crime. Seus colegas já recolheram as pistas.)",
+                        phraseHighlight: "SO, WHAT'VE WE GOT?",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "An expression used to ask for a quick summary of a situation, showing you want to know what has been discovered so far.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“Então… o que temos aqui?” or “E aí, o que temos?”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "What's the situation?" },
+                            { text: "What's the rundown?" },
+                            { text: "What's the status?" }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Use for: starting to understand a situation." },
+                            { text: "Avoid in: formal meetings." },
+                            { text: "Common in work contexts, projects, meetings, or investigations." },
+                            { text: "🧠 Tip for Brazilians: Think of when someone arrives and says: “Alright... what do we have there?” — with that “give me the summary” tone." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "You arrive at the team room and everyone is analyzing reports. You say:",
+                        exercisePrompt: "<span class=\"font-bold\">___</span>, what’ve we got?",
+                        correctAnswer: "so",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson4': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está no escritório e um colega sempre age de forma durona, intimidadora e “justiceira”, querendo resolver tudo sozinho, no estilo policial dos filmes. Alguém comenta, rindo:",
+                        ptContextText: "(em português para contextualizar: Você está no escritório e um colega sempre age de forma durona, intimidadora e “justiceira”, no estilo policial dos filmes.)",
+                        phraseHighlight: "WHOA… LOOK AT YOU, DIRTY HARRY!",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "É usado de forma irônica ou divertida para chamar alguém de “durão”, “brucutu” ou “justiceiro”, fazendo alusão ao personagem do filme, um policial linha-dura que faz justiça com as próprias mãos.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“Olha só o valentão aí!” ou “Tá se achando o xerife agora, é?”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Look at the tough guy!" },
+                            { text: "You think you're a big shot?" },
+                            { text: "Whoa, settle down, sheriff." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Colleague 1: I told him if he messes up again, he’s out.", pt: "Colega 1: Eu disse que se ele errar de novo, tá fora." },
+                            { en: "Colleague 2: Whoa… look at you, Dirty Harry!", pt: "Colega 2: Eita… olha o valentão aí!" }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Use para: brincar com alguém que está agindo como um policial durão." },
+                            { text: "Evite em: situações sérias ou formais (pode soar ofensivo)." },
+                            { text: "Mostra conhecimento da cultura pop americana — ótimo para soar mais natural." },
+                            { text: "🧠 Associação para brasileiros: Pense quando alguém fala: “Tá se achando o Capitão Nascimento!” (usando humor para dizer que a pessoa está exagerando no tom de autoridade)" }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Seu amigo fala com voz firme e diz que vai “botar ordem” na equipe.",
+                        exercisePrompt: "Look at you, <span class=\"font-bold\">___ ___</span>!",
+                        correctAnswer: "Dirty Harry",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You're at the office and a colleague always acts tough, intimidating, and like a “vigilante,” wanting to solve everything on their own, in the style of movie cops. Someone comments, laughing:",
+                        ptContextText: "(in Portuguese for context: Você está no escritório e um colega sempre age de forma durona, intimidadora e “justiceira”, no estilo policial dos filmes.)",
+                        phraseHighlight: "WHOA… LOOK AT YOU, DIRTY HARRY!",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "Used ironically or playfully to call someone a 'tough guy,' 'macho man,' or 'vigilante,' alluding to the movie character, a hard-nosed cop who takes justice into his own hands.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“Olha só o valentão aí!” or “Tá se achando o xerife agora, é?”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Look at the tough guy!" },
+                            { text: "You think you're a big shot?" },
+                            { text: "Whoa, settle down, sheriff." }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Use for: joking with someone who is acting like a tough cop." },
+                            { text: "Avoid in: serious or formal situations (it can sound offensive)." },
+                            { text: "Shows knowledge of American pop culture — great for sounding more natural." },
+                            { text: "🧠 Tip for Brazilians: Think of when someone talks: “You think you’re Captain Nascimento!” (using humor to say the person is exaggerating their tone of authority)" }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "Your friend speaks in a firm voice and says they're going to “put the team in order.”",
+                        exercisePrompt: "Look at you, <span class=\"font-bold\">___ ___</span>!",
+                        correctAnswer: "Dirty Harry",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson5': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está se preparando para sair, mas não acha sua jaqueta em lugar nenhum. Você diz:",
+                        ptContextText: "(em português para contextualizar: Você está se preparando para sair, mas não acha sua jaqueta em lugar nenhum.)",
+                        phraseHighlight: "THE JACKET WENT MISSING!",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Significa que a jaqueta desapareceu, sumiu misteriosamente. Essa estrutura mostra que algo sumiu sem ninguém saber como ou quando.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“A jaqueta sumiu!” ou “A jaqueta desapareceu do nada!”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Disappeared." },
+                            { text: "Vanished." },
+                            { text: "Is nowhere to be found." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Maria: Where’s my jacket?", pt: "Maria: Onde está minha jaqueta?" },
+                            { en: "John: I don’t know… it just went missing.", pt: "John: Não sei… ela simplesmente sumiu." }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Use para: objetos, como phone, keys, documents, money." },
+                            { text: "Soa muito natural e nativo — melhor que dizer “disappeared” (que parece mais dramático ou mágico ✨)." },
+                            { text: "⚠️ Não use para pessoas (a não ser em contextos noticiosos/sérios, tipo “a child went missing”)." },
+                            { text: "🧠 Associação para brasileiros: Pense quando alguém diz casualmente: “Cara… meu celular sumiu, do nada!”" }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Você está procurando seu crachá e não encontra.",
+                        exercisePrompt: "My badge <span class=\"font-bold\">___ ___</span>.",
+                        correctAnswer: "went missing",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You're getting ready to go out, but you can't find your jacket anywhere. You say:",
+                        ptContextText: "(in Portuguese for context: Você está se preparando para sair, mas não acha sua jaqueta em lugar nenhum.)",
+                        phraseHighlight: "THE JACKET WENT MISSING!",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "It means the jacket has disappeared, vanished mysteriously. This structure shows that something disappeared without anyone knowing how or when.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“A jaqueta sumiu!” or “A jaqueta desapareceu do nada!”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Disappeared." },
+                            { text: "Vanished." },
+                            { text: "Is nowhere to be found." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "You're looking for your badge and you can't find it.",
+                        exercisePrompt: "My badge <span class=\"font-bold\">___ ___</span>.",
+                        correctAnswer: "went missing",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson6': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você confiou em um colega e contou um segredo. No dia seguinte, todo mundo no escritório já sabe… Você encara a pessoa e diz com raiva:",
+                        ptContextText: "(em português para contextualizar: Você confiou em um colega e contou um segredo. No dia seguinte, todo mundo no escritório já sabe…)",
+                        phraseHighlight: "YOU ARE A RAT!",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Quer dizer que a pessoa é um traidor, falso, dedo-duro ou espião. É um insulto forte, mostrando que alguém quebrou a confiança.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“Você é um traíra!” / “Você é um X-9!” / “Você é um dedo-duro!”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "You are a snitch." },
+                            { text: "You are a traitor." },
+                            { text: "You sold me out." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Jack: I can’t believe you told the boss what I said.", pt: "Jack: Não acredito que você contou pro chefe o que eu disse." },
+                            { en: "Mike: I had to.", pt: "Mike: Eu tive que contar." },
+                            { en: "Jack: You are a rat!", pt: "Jack: Você é um traíra!" }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Muito comum em filmes policiais, gangues, prisões ou brigas." },
+                            { text: "⚠️ Ofensivo — só use para entender (compreensão), não para falar com alguém diretamente, a não ser que esteja em uma atuação." },
+                            { text: "Também se usa como verbo: “He ratted me out” = “Ele me dedurou.”" },
+                            { text: "🧠 Associação para brasileiros: Pense naquelas novelas ou filmes quando alguém grita: “Você me traiu!” ou “Você é um X-9!”" }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Você descobre que seu amigo contou seu segredo pra todos.",
+                        exercisePrompt: "You are a <span class=\"font-bold\">___</span>!",
+                        correctAnswer: "rat",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You trusted a colleague and told them a secret. The next day, everyone in the office already knows... You confront the person and say angrily:",
+                        ptContextText: "(in Portuguese for context: Você confiou em um colega e contou um segredo. No dia seguinte, todo mundo no escritório já sabe…)",
+                        phraseHighlight: "YOU ARE A RAT!",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "It means the person is a traitor, fake, snitch, or spy. It's a strong insult, showing that someone broke trust.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“Você é um traíra!” / “Você é um X-9!” / “Você é um dedo-duro!”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "You are a snitch." },
+                            { text: "You are a traitor." },
+                            { text: "You sold me out." }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Very common in police movies, with gangs, in prisons, or fights." },
+                            { text: "⚠️ Offensive — only use for understanding (comprehension), not to speak directly to someone unless you're acting." },
+                            { text: "It's also used as a verb: 'He ratted me out' = 'He snitched on me.'" },
+                            { text: "🧠 Tip for Brazilians: Think of those soap operas or movies when someone yells: 'You betrayed me!' or 'You are an X-9!'" }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "You find out your friend told your secret to everyone.",
+                        exercisePrompt: "You are a <span class=\"font-bold\">___</span>!",
+                        correctAnswer: "rat",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson7': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está esperando seu amigo há meia hora na porta do cinema. Quando ele finalmente aparece, você diz:",
+                        ptContextText: "(em português para contextualizar: Você está esperando seu amigo há meia hora na porta do cinema.)",
+                        phraseHighlight: "WHAT TOOK YOU?",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "É uma forma curta e natural de perguntar por que a pessoa demorou tanto. Não precisa dizer so long — os nativos normalmente só dizem “What took you?”",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“O que aconteceu que você demorou tanto?”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Why did you take so long?" },
+                            { text: "Where have you been?" },
+                            { text: "What took you so long?" }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Lisa: Finally!", pt: "Lisa: Finalmente!" },
+                            { en: "Tom: Sorry I’m late.", pt: "Tom: Desculpa o atraso." },
+                            { en: "Lisa: What took you?", pt: "Lisa: Demorou, hein! O que aconteceu?" }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Usada entre amigos e pessoas próximas — bem casual e comum." },
+                            { text: "⚠️ Pode soar impaciente ou levemente irritada, dependendo do tom de voz." },
+                            { text: "Uma forma mais suave e educada seria: “What happened? / Why are you late?”" },
+                            { text: "🧠 Associação para brasileiros: Pense quando alguém chega atrasado e você solta um: “E aí, o que houve? Demorou pra caramba!”" }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Cena: Seu amigo chega bem atrasado e você quer soar natural e nativo.",
+                        exercisePrompt: "<span class=\"font-bold\">___</span> took you?",
+                        correctAnswer: "What",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You've been waiting for your friend for half an hour at the movie theater door. When he finally shows up, you say:",
+                        ptContextText: "(in Portuguese for context: Você está esperando seu amigo há meia hora na porta do cinema.)",
+                        phraseHighlight: "WHAT TOOK YOU?",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "It's a short, natural way to ask why someone took so long. You don't need to say so long — natives usually just say 'What took you?'",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“O que aconteceu que você demorou tanto?”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Why did you take so long?" },
+                            { text: "Where have you been?" },
+                            { text: "What took you so long?" }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Used between friends and close people — very casual and common." },
+                            { text: "⚠️ Can sound impatient or slightly annoyed, depending on the tone of voice." },
+                            { text: "A softer, more polite way would be: 'What happened? / Why are you late?'" },
+                            { text: "🧠 Tip for Brazilians: Think of when someone arrives late and you casually say: “E aí, o que houve? Demorou pra caramba!”" }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "Scene: Your friend arrives very late and you want to sound natural and native.",
+                        exercisePrompt: "<span class=\"font-bold\">___</span> took you?",
+                        correctAnswer: "What",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson8': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está num protesto pacífico, mas de repente as pessoas começam a brigar e a polícia chega correndo… Você manda mensagem para um amigo dizendo:",
+                        ptContextText: "(em português para contextualizar: Você está num protesto pacífico, mas de repente as pessoas começam a brigar e a polícia chega correndo…)",
+                        phraseHighlight: "IT’S ALL GETTING UGLY HERE.",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Quer dizer que a situação está ficando perigosa, tensa, fora de controle. Não significa “feio” de aparência, mas sim “feio” de clima/ambiente.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“O bicho tá pegando aqui.” / “A coisa tá ficando feia aqui.” / “Tá dando ruim aqui.”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Things are getting messy." },
+                            { text: "It's getting out of hand." },
+                            { text: "The situation is deteriorating." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "John: Are you still at the match?", pt: "John: Você ainda está no jogo?" },
+                            { en: "Mike: Yeah… It’s all getting ugly here. The fans are fighting.", pt: "Mike: Sim… O bicho tá pegando aqui. A galera tá brigando." }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Usada para conflitos, brigas, caos, tensão no ar." },
+                            { text: "Muito comum em filmes de ação, suspense, noticiários ou eventos esportivos." },
+                            { text: "Mostra que algo está saindo do controle." },
+                            { text: "🧠 Associação para brasileiros: Pense quando você vê uma confusão começando e diz: “Ih… o bicho tá pegando!”" }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Você está num lugar onde tudo está ficando perigoso.",
+                        exercisePrompt: "It’s all getting <span class=\"font-bold\">___</span> here.",
+                        correctAnswer: "ugly",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You're at a peaceful protest, but suddenly people start fighting and the police rush in... You text a friend saying:",
+                        ptContextText: "(in Portuguese for context: Você está num protesto pacífico, mas de repente as pessoas começam a brigar e a polícia chega correndo…)",
+                        phraseHighlight: "IT’S ALL GETTING UGLY HERE.",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "It means the situation is becoming dangerous, tense, out of control. It doesn't mean 'ugly' in appearance, but rather 'ugly' in mood/atmosphere.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“O bicho tá pegando aqui.” / “A coisa tá ficando feia aqui.” / “Tá dando ruim aqui.”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Things are getting messy." },
+                            { text: "It's getting out of hand." },
+                            { text: "The situation is deteriorating." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "You're in a place where things are getting dangerous.",
+                        exercisePrompt: "It’s all getting <span class=\"font-bold\">___</span> here.",
+                        correctAnswer: "ugly",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson9': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está vendo um programa de TV e o apresentador diz:",
+                        ptContextText: "(em português para contextualizar: Você está vendo um programa de TV e o apresentador diz:)",
+                        phraseHighlight: "STAY TUNED FOR THAT",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "Quer dizer “fique ligado” ou “continue acompanhando” porque algo interessante está por vir. É um convite para a pessoa não ir embora, continuar prestando atenção.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“Fica ligado nisso.” / “Não perde isso, hein.” / “Segue acompanhando que vem coisa boa.”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Hang in there." },
+                            { text: "Stick around for that." },
+                            { text: "Don't go anywhere." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "Host: We’ll announce the winner right after the break. Stay tuned for that!", pt: "Apresentador: Vamos anunciar o vencedor logo após o intervalo. Fica ligado!" }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Muito usada em TV, rádio, podcasts, vídeos online, redes sociais." },
+                            { text: "Pode ser usada também entre amigos, de forma divertida, para criar expectativa." },
+                            { text: "Também aparece como só: “Stay tuned!” (sem o “for that”)." },
+                            { text: "🧠 Associação para brasileiros: Pense no jeito que apresentadores dizem: “Não sai daí!” ou “Depois do intervalo tem mais — fica ligado!”" }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Você está encerrando um vídeo e quer criar expectativa.",
+                        exercisePrompt: "We’ll talk about that next — stay <span class=\"font-bold\">___</span> for that!",
+                        correctAnswer: "tuned",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You're watching a TV show and the host says:",
+                        ptContextText: "(in Portuguese for context: Você está vendo um programa de TV e o apresentador diz:)",
+                        phraseHighlight: "STAY TUNED FOR THAT",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "It means 'stay alert' or 'keep following' because something interesting is coming up. It's an invitation for the person not to leave, but to continue paying attention.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“Fica ligado nisso.” / “Não perde isso, hein.” / “Segue acompanhando que vem coisa boa.”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Hang in there." },
+                            { text: "Stick around for that." },
+                            { text: "Don't go anywhere." }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Very common in TV, radio, podcasts, online videos, and social media." },
+                            { text: "Can also be used playfully among friends to build anticipation." },
+                            { text: "Also appears as just: 'Stay tuned!' (without 'for that')." },
+                            { text: "🧠 Tip for Brazilians: Think of how hosts say: 'Don't go anywhere!' or 'There's more after the break — stay tuned!'" }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "You're ending a video and want to build anticipation.",
+                        exercisePrompt: "We’ll talk about that next — stay <span class=\"font-bold\">___</span> for that!",
+                        correctAnswer: "tuned",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                'lesson10': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está conversando com um colega sobre a semana. Ele comenta que está sempre ocupado e você pergunta o que ele faz no tempo livre. Ele responde:",
+                        ptContextText: "(em português para contextualizar: Você está conversando com um colega sobre a semana. Ele comenta que está sempre ocupado e você pergunta o que ele faz no tempo livre.)",
+                        phraseHighlight: "HUSTLE JOB",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "É um trabalho extra, um 'bico' ou uma atividade feita para ganhar uma grana a mais, muitas vezes com um toque de urgência ou improviso.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "“Bico” / “trampo rápido” / “trabalho por fora”",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "Side gig." },
+                            { text: "Side hustle." },
+                            { text: "Odd job." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "You: You always seem so busy. What's going on?", pt: "Você: Você sempre parece tão ocupado. O que está acontecendo?" },
+                            { en: "Colleague: This isn’t my main job — just a hustle job I do on weekends.", pt: "Colega: Esse não é meu trabalho principal — é só um bico que faço nos fins de semana." }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Use para: trabalhos informais, temporários ou extras." },
+                            { text: "Evite em: contextos formais como um currículo ou uma reunião executiva." },
+                            { text: "Associe com: alguém que tem uma 'correria' para fazer, como entregar comida à noite para complementar a renda." },
+                            { text: "🧠 Dica para brasileiros: Pense em 'bico' ou 'trampo' — a vibe é a mesma de um trabalho rápido para fazer uma grana extra." }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Seu amigo diz que está economizando para uma viagem e por isso está fazendo mais trabalho extra.",
+                        exercisePrompt: "I’m working a <span class=\"font-bold\">___ ___</span> to save up for my trip.",
+                        correctAnswer: "hustle job",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You're talking with a colleague about the week. He comments that he's always busy and you ask him what he does in his free time. He replies:",
+                        ptContextText: "(in Portuguese for context: Você está conversando com um colega sobre a semana. Ele comenta que está sempre ocupado e você pergunta o que ele faz no tempo livre.)",
+                        phraseHighlight: "HUSTLE JOB",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "A task or gig done quickly, often with a lot of energy or pressure, sometimes outside regular work — it can imply being resourceful or doing side work to make money.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "“Bico” / “trampo rápido” / “trabalho por fora”",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "Side gig." },
+                            { text: "Side hustle." },
+                            { text: "Odd job." }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Use for: informal, temporary, or extra jobs." },
+                            { text: "Avoid in: formal contexts like a resume or an executive meeting." },
+                            { text: "Associate with: someone who has a 'side hustle' to do, like delivering food at night to supplement their income." },
+                            { text: "🧠 Tip for Brazilians: Think of 'bico' or 'trampo' — the vibe is the same as a quick job to earn extra cash." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "Your friend says they are saving up for a trip and that's why they are doing more extra work.",
+                        exercisePrompt: "I’m working a <span class=\"font-bold\">___ ___</span> to save up for my trip.",
+                        correctAnswer: "hustle job",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                },
+                 'lesson11': {
+                    pt: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Switch to English",
+                        sectionTitle1: "Cena Imersiva",
+                        scriptText: "Imagine this:",
+                        situationText: "Você está discutindo com um colega de trabalho a diferença entre um trabalho extra formal e um informal, explicando a diferença:",
+                        ptContextText: "(em português para contextualizar: Você está discutindo com um colega de trabalho a diferença entre um trabalho extra formal e um informal.)",
+                        phraseHighlight: "SIDE JOB vs. HUSTLE JOB",
+                        sectionTitle2: "📌 Explicação",
+                        meaningText: "A principal diferença é o tom e a natureza do trabalho. Um 'side job' é um segundo emprego mais estável e formal. Já um 'hustle job' é um bico mais rápido, informal e com a conotação de 'se virar' para ganhar dinheiro.",
+                        sectionTitle3: "🇧🇷 Equivalente natural no Brasil",
+                        equivalentText1: "Side Job = 'trabalho extra' / 'bico fixo' | Hustle Job = 'bico' / 'trampo rápido'",
+                        sectionTitleSynonyms: "✨ Sinônimos e Variações",
+                        synonyms: [
+                            { text: "A side job is also called a part-time job or second job." },
+                            { text: "A hustle job is often referred to as a side hustle or odd job." }
+                        ],
+                        sectionTitle4: "💬 Diálogo Bilíngue",
+                        englishTitle: "English",
+                        portugueseTitle: "Português",
+                        dialogue: [
+                            { en: "A: What's the difference between a side job and a hustle job?", pt: "A: Qual a diferença entre um 'side job' e um 'hustle job'?" },
+                            { en: "B: A side job is more stable, like a formal second job. A hustle job is a quick gig for fast cash.", pt: "B: Um 'side job' é mais estável, como um segundo trabalho formal. Um 'hustle job' é um bico rápido para ganhar uma grana extra." }
+                        ],
+                        sectionTitle5: "🎯 Dicas e Associações",
+                        usageTips: [
+                            { text: "Side Job: Som mais organizado e planejado. Ex: Ser professor de inglês nos fins de semana." },
+                            { text: "Hustle Job: Som mais urgente e empreendedor. Ex: Fazer entregas à noite para pagar uma conta." },
+                            { text: "A nuance de 'hustle' sugere 'correria' e esforço para 'se virar'." },
+                            { text: "🧠 Dica para brasileiros: Lembre-se: 'side' remete a 'lado', 'estável'. 'hustle' remete a 'correria', 'urgência'." }
+                        ],
+                        sectionTitle6: "🧩 Exercício de Fixação",
+                        exerciseScene: "Um amigo te pergunta sobre um trabalho informal que ele faz nos fins de semana para ganhar um extra. Você diz:",
+                        exercisePrompt: "That’s a classic example of a <span class=\"font-bold\">___ ___</span>.",
+                        correctAnswer: "hustle job",
+                        inputPlaceholder: "Type the expression here...",
+                        submitBtn: "Check Answer",
+                        feedbackCorrect: "✅ Resposta correta! Parabéns!",
+                        feedbackIncorrect: "❌ Resposta incorreta. Tente novamente!"
+                    },
+                    en: {
+                        mainTitle: "Real English for Brazilians",
+                        langToggleBtn: "Mudar para Português",
+                        sectionTitle1: "Immersive Scene",
+                        scriptText: "Imagine this:",
+                        situationText: "You are discussing the difference between a formal extra job and an informal one with a colleague, explaining the difference:",
+                        ptContextText: "(in Portuguese for context: Você está discutindo com um colega de trabalho a diferença entre um trabalho extra formal e um informal.)",
+                        phraseHighlight: "SIDE JOB vs. HUSTLE JOB",
+                        sectionTitle2: "📌 Explanation",
+                        meaningText: "The main difference is the tone and nature of the work. A 'side job' is a more stable and formal second job. A 'hustle job' is a quicker, more informal gig with the connotation of 'hustling' to make money.",
+                        sectionTitle3: "🇧🇷 Natural equivalent in Brazil",
+                        equivalentText1: "Side Job = 'trabalho extra' / 'bico fixo' | Hustle Job = 'bico' / 'trampo rápido'",
+                        sectionTitleSynonyms: "✨ Synonyms and Variations",
+                        synonyms: [
+                            { text: "A side job is also called a part-time job or second job." },
+                            { text: "A hustle job is often referred to as a side hustle or odd job." }
+                        ],
+                        sectionTitle5: "🎯 Tips and Associations",
+                        usageTips: [
+                            { text: "Side Job: Sounds more organized and planned. Ex: Being an English teacher on weekends." },
+                            { text: "Hustle Job: Sounds more urgent and entrepreneurial. Ex: Making deliveries at night to pay a bill." },
+                            { text: "The nuance of 'hustle' suggests a 'rush' and effort to 'get by'." },
+                            { text: "🧠 Tip for Brazilians: Remember: 'side' refers to 'side', 'stable'. 'hustle' refers to 'rush', 'urgency'." }
+                        ],
+                        sectionTitle6: "🧩 Fixation Exercise",
+                        exerciseScene: "A friend asks you about an informal job they do on weekends to earn extra cash. You say:",
+                        exercisePrompt: "That’s a classic example of a <span class=\"font-bold\">___ ___</span>.",
+                        correctAnswer: "hustle job",
+                        inputPlaceholder: "Digite a expressão aqui...",
+                        submitBtn: "Verificar Resposta",
+                        feedbackCorrect: "✅ Correct answer! Congratulations!",
+                        feedbackIncorrect: "❌ Incorrect answer. Try again!"
+                    }
+                }
+            };
+            
+            let currentLesson = 'lesson1';
+            let isEnglish = false;
+            const langToggleBtn = document.getElementById('langToggleBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const inputField = document.getElementById('exerciseInput');
+            const feedbackDiv = document.getElementById('feedback');
+            const lesson1Btn = document.getElementById('lesson1Btn');
+            const lesson2Btn = document.getElementById('lesson2Btn');
+            const lesson3Btn = document.getElementById('lesson3Btn');
+            const lesson4Btn = document.getElementById('lesson4Btn');
+            const lesson5Btn = document.getElementById('lesson5Btn');
+            const lesson6Btn = document.getElementById('lesson6Btn');
+            const lesson7Btn = document.getElementById('lesson7Btn');
+            const lesson8Btn = document.getElementById('lesson8Btn');
+            const lesson9Btn = document.getElementById('lesson9Btn');
+            const lesson10Btn = document.getElementById('lesson10Btn');
+            const lesson11Btn = document.getElementById('lesson11Btn');
+
+            const updateContent = (lessonKey, lang) => {
+                const currentLessonContent = lessons[lessonKey];
+                const currentLangContent = currentLessonContent[lang];
+
+                document.getElementById('mainTitle').textContent = currentLangContent.mainTitle;
+                langToggleBtn.textContent = currentLangContent.langToggleBtn;
+                document.getElementById('sectionTitle1').textContent = currentLangContent.sectionTitle1;
+                document.getElementById('scriptText').textContent = currentLangContent.scriptText;
+                document.getElementById('situationText').textContent = currentLangContent.situationText;
+                document.getElementById('ptContextText').textContent = currentLangContent.ptContextText;
+                document.getElementById('phraseHighlight').textContent = currentLangContent.phraseHighlight;
+                document.getElementById('sectionTitle2').textContent = currentLangContent.sectionTitle2;
+                document.getElementById('meaningText').textContent = currentLangContent.meaningText;
+                document.getElementById('sectionTitle3').textContent = currentLangContent.sectionTitle3;
+                document.getElementById('equivalentText1').textContent = currentLangContent.equivalentText1;
+                document.getElementById('sectionTitleSynonyms').textContent = currentLangContent.sectionTitleSynonyms;
+
+                // Update synonyms content
+                const synonymsList = document.getElementById('synonymsList');
+                synonymsList.innerHTML = '';
+                if (currentLangContent.synonyms && Array.isArray(currentLangContent.synonyms)) {
+                    currentLangContent.synonyms.forEach(synonym => {
+                        const li = document.createElement('li');
+                        li.textContent = synonym.text;
+                        synonymsList.appendChild(li);
+                    });
+                }
+
+
+                document.getElementById('sectionTitle4').textContent = currentLangContent.sectionTitle4;
+                
+                // Update dialogue content
+                const englishDialogueDiv = document.getElementById('englishDialogue');
+                const portugueseDialogueDiv = document.getElementById('portugueseDialogue');
+                englishDialogueDiv.innerHTML = '';
+                portugueseDialogueDiv.innerHTML = '';
+
+                if (currentLangContent.dialogue && Array.isArray(currentLangContent.dialogue)) {
+                    currentLangContent.dialogue.forEach(line => {
+                        const enP = document.createElement('p');
+                        enP.classList.add('text-lg', 'mb-2');
+                        const [enSpeaker, enText] = line.en.split(':');
+                        enP.innerHTML = `<span class="font-bold text-indigo-400">${enSpeaker}:</span>${enText}`;
+                        englishDialogueDiv.appendChild(enP);
+
+                        const ptP = document.createElement('p');
+                        ptP.classList.add('text-lg', 'mb-2');
+                        const [ptSpeaker, ptText] = line.pt.split(':');
+                        ptP.innerHTML = `<span class="font-bold text-indigo-400">${ptSpeaker}:</span>${ptText}`;
+                        portugueseDialogueDiv.appendChild(ptP);
+                    });
+                }
+
+
+                document.getElementById('sectionTitle5').textContent = currentLangContent.sectionTitle5;
+                const tipsList = document.getElementById('usageTips');
+                tipsList.innerHTML = '';
+                if (currentLangContent.usageTips && Array.isArray(currentLangContent.usageTips)) {
+                    currentLangContent.usageTips.forEach((tip, index) => {
+                        const li = document.createElement('li');
+                        li.innerHTML = tip.text;
+                        if (index === currentLangContent.usageTips.length - 1) {
+                            li.classList.add('text-yellow-400', 'font-semibold', 'mt-4');
+                        }
+                        tipsList.appendChild(li);
+                    });
+                }
+                
+                document.getElementById('exerciseTitle').textContent = currentLangContent.sectionTitle6;
+                document.getElementById('exerciseScene').textContent = currentLangContent.exerciseScene;
+                document.getElementById('exercisePrompt').innerHTML = currentLangContent.exercisePrompt;
+                inputField.placeholder = currentLangContent.inputPlaceholder;
+                submitBtn.textContent = currentLangContent.submitBtn;
+                feedbackDiv.style.display = 'none';
+                inputField.value = '';
+            };
+
+            const switchLesson = (newLessonKey) => {
+                currentLesson = newLessonKey;
+                updateContent(currentLesson, isEnglish ? 'en' : 'pt');
+            };
+
+            lesson1Btn.addEventListener('click', () => switchLesson('lesson1'));
+            lesson2Btn.addEventListener('click', () => switchLesson('lesson2'));
+            lesson3Btn.addEventListener('click', () => switchLesson('lesson3'));
+            lesson4Btn.addEventListener('click', () => switchLesson('lesson4'));
+            lesson5Btn.addEventListener('click', () => switchLesson('lesson5'));
+            lesson6Btn.addEventListener('click', () => switchLesson('lesson6'));
+            lesson7Btn.addEventListener('click', () => switchLesson('lesson7'));
+            lesson8Btn.addEventListener('click', () => switchLesson('lesson8'));
+            lesson9Btn.addEventListener('click', () => switchLesson('lesson9'));
+            lesson10Btn.addEventListener('click', () => switchLesson('lesson10'));
+            lesson11Btn.addEventListener('click', () => switchLesson('lesson11'));
+
+            langToggleBtn.addEventListener('click', () => {
+                isEnglish = !isEnglish;
+                updateContent(currentLesson, isEnglish ? 'en' : 'pt');
+            });
+
+            submitBtn.addEventListener('click', () => {
+                const answer = inputField.value.trim().toLowerCase();
+                const correctAnswer = lessons[currentLesson][isEnglish ? 'en' : 'pt'].correctAnswer.toLowerCase();
+
+                if (answer === correctAnswer) {
+                    feedbackDiv.style.display = 'block';
+                    feedbackDiv.textContent = isEnglish ? lessons[currentLesson].en.feedbackCorrect : lessons[currentLesson].pt.feedbackCorrect;
+                    feedbackDiv.classList.remove('text-red-500');
+                    feedbackDiv.classList.add('text-green-600');
+                } else {
+                    feedbackDiv.style.display = 'block';
+                    feedbackDiv.textContent = isEnglish ? lessons[currentLesson].en.feedbackIncorrect : lessons[currentLesson].pt.feedbackIncorrect;
+                    feedbackDiv.classList.remove('text-green-600');
+                    feedbackDiv.classList.add('text-red-500');
+                }
+            });
+
+            inputField.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    submitBtn.click();
+                }
+            });
+
+            // Initial load
+            updateContent(currentLesson, 'pt');
+        });
+    </script>
+</body>
+</html>
